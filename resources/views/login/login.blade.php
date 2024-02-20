@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap</title>
+    <title>Login</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -66,10 +66,10 @@
       <div class="container-login">
         <div class="container-login">
           <div class="container-login">
-            <label for="">
+            <a href="{{ url('auth/google') }}">
               <img src="images/google.png" alt="gg" class="google-logo" />
               Sign In With Google
-            </label>
+            </a>
             <p>Don’t have an account?<a href=""> Sign In</a></p>
           </div>
         </div>

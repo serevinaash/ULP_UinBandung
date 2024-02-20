@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\GoogleLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('auth/google', [GoogleLoginController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleLoginController::class, 'handleCallback']);
 
 Route::get('/', function () {
     return view('home');
