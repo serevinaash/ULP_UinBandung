@@ -34,17 +34,15 @@
         Selamat Datang Di<br />
         Unit Layanan Psikologi!
       </h3>
-      <p>Belum punya akun?<a href="/register"><u> Daftar disini</u></a></p>
-      <br />
+      <p class="mb-4">Belum punya akun?<a href="/register"><u> Daftar disini</u></a></p>
       <a class="back" href="/"><img src="images/back.svg" alt="back" class="back" /></a>
       <form action="/login" method="post">
         @csrf
         @if(session()->has("loginError"))
-          <div class="alert alert-danger alert-dismissible fade show" id="alert" role="alert">
+          <div class="alert alert-danger alert-dismissible fade show mb-3" id="alert" role="alert">
             {{ session("loginError") }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-          <br>
         @endif
   
         <input
@@ -53,7 +51,7 @@
           name="email"
           placeholder="Email"
           required
-          class="form-control @error('email') is-invalid @enderror"
+          class="form-control @error('email') is-invalid @enderror mt-1"
         />
         @error("email")
           <div class="invalid-feedback">
@@ -68,7 +66,7 @@
           name="password"
           placeholder="Password"
           required
-          class="form-control @error('password') is-invalid @enderror"
+          class="form-control @error('password') is-invalid @enderror mb-4"
         />
         @error("password")
         <div class="invalid-feedback">
@@ -77,8 +75,8 @@
         @enderror
   
         <p>lupa password? <a href="">klik disini</a></p>
-        <button id="login-button">Login</button>
-        <div class="d-flex justify-content mb-3 mt-3">
+        <button id="login-button" class="mt-2">Login</button>
+        <div class="d-flex justify-content mb-3 mt-2">
           <div class="divider"></div>
           <div class="or-text">or</div>
           <div class="right-divider "></div>
