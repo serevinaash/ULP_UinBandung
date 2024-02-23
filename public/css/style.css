@@ -23,7 +23,7 @@ body {
   margin-top: -20px;
 }
 
-.container button {
+#login-button {
   width: 400px;
   height: 57px;
   background-color: #24317f;
@@ -37,16 +37,14 @@ body {
 }
 
 .container .divider {
-  position: absolute;
   top: 520px;
   left: 115px;
-  width: 170px;
+  width: 180px;
   height: 1px;
   background-color: #000;
 }
 
 .container .or-text {
-  position: absolute;
   top: 510px;
   left: 270px;
   background-color: #fff;
@@ -54,15 +52,15 @@ body {
 }
 
 .container .right-divider {
-  position: absolute;
   top: 520px;
   left: 310px;
-  width: 170px;
+  width: 180px;
   height: 1px;
   background-color: #000;
 }
 .container-login {
-  margin-top: 80px;
+  margin-top: 20px;
+  justify-content: center;
 }
 .container-login label {
   display: flex;
@@ -79,17 +77,16 @@ body {
 .container-login .facebook-logo {
   width: 25px;
   height: 25px;
-  margin-right: 10px;
 }
 
 .container-login a {
   margin-left: 5px;
+  justify-content: center;
 }
 .selamat {
   text-align: justify;
 }
 .container-login p {
-  position: absolute;
   top: 545px;
   left: 164px;
   margin: 0;
@@ -100,6 +97,7 @@ body {
   left: 20px;
   margin: 0;
   width: 50px;
+  transition: transform 0.2s ease; /* Menambahkan efek transisi */
 }
 
 .back a {
@@ -108,6 +106,13 @@ body {
   font-weight: bold;
   top: 10px;
 }
+
+
+.back:hover,
+.back:active {
+  transform: scale(1.1); /* Memperbesar tombol saat dihover atau di tekan */
+}
+
 
 .container-login a {
   text-decoration: none; /* Remove underline */
@@ -169,3 +174,13 @@ body {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+#alert {
+  width: 400px;
+  margin-bottom: 20px; /* Anda bisa menyesuaikan nilai margin-bottom sesuai kebutuhan */
+}
+
+.d-flex {
+  align-items: center; /* Pusatkan secara vertikal */
+}
+

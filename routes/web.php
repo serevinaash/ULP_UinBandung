@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\Auth\GoogleLoginController;
 use Illuminate\Support\Facades\Route;
+
+
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\GoogleLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('auth/google', [GoogleLoginController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleLoginController::class, 'handleCallback']);
+
+
 
 Route::get('/', function () {
     return view('home');
@@ -59,3 +64,5 @@ Route::get('/register/psikotes', function(){
 Route::get('/register/ujikompetensi', function(){
     return view('register.registerUjiKompetensi');
 });
+
+Route::post("/login",[LoginController::class, "authenticate"]);
