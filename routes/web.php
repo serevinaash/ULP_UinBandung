@@ -1,8 +1,13 @@
 <?php
 
+
 use App\Http\Controllers\Auth\GoogleLoginController;
 use App\Http\Controllers\Auth\RegistrationController;
 use Illuminate\Support\Facades\Route;
+
+
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\GoogleLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +25,7 @@ Route::get('auth/google/callback', [GoogleLoginController::class, 'handleCallbac
 
 Route::get('/register', [RegistrationController::class, 'index']);
 Route::post('/submit-registration', [RegistrationController::class, 'register']);
+
 
 Route::get('/', function () {
     return view('home');
@@ -59,3 +65,5 @@ Route::get('/register/psikotes', function(){
 Route::get('/register/ujikompetensi', function(){
     return view('register.registerUjiKompetensi');
 });
+
+Route::post("/login",[LoginController::class, "authenticate"]);
