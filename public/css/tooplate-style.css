@@ -63,7 +63,7 @@ h1 {
 h2 {
   color: #272727;
   font-size: 3em;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 h3 {
@@ -592,7 +592,8 @@ background-color:  #155c7a; /* Darker blue color on hover */
 }
 .bg-about{
   background: url('../images/Ellipse4.svg') no-repeat top center;
-  background-size: cover;
+  background-size: 90%;
+  margin-bottom: 100px;
   
 }
 .about-info {
@@ -625,8 +626,12 @@ background-color:  #155c7a; /* Darker blue color on hover */
 
 .img-thinking {
   width: 200px; /* Adjust the width */
-  height: 200px; /* Adjust the height */
-  align-text: center;
+  height: 200px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  
 }
 
 .img-konseling{
@@ -653,14 +658,17 @@ margin-top: 70px;
 .vision-box,
 .mission-box {
   background-color: #90C8E8;
-  color: #fff; 
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 40px;
-  text-align: justify;
-  width: 100%;
-  max-width: 600px; 
-  box-sizing: border-box; 
+  margin: 40px auto; /* Margin auto will center the boxes horizontally */
+  text-align: center;
+  width: 50%; /* Adjust the width based on your preference */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .vision-box h3,

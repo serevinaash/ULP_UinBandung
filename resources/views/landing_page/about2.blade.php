@@ -2,8 +2,10 @@
     <div class="container">
         <div class="bg-about">
             <div class="row">
-            <div class="col-md-12 col-sm-12 mx-auto">
-                <h2>Vission</h2> <!-- Tambahkan class mx-auto di sini -->
+                <div class="col-md-12 col-sm-12 mx-auto">
+                <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
+                              Vission
+                          </h2>
                     <div class="vision-box text-center">
                        
                         <p>
@@ -16,8 +18,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 mx-auto"> 
-                    
-                <h2>Mission</h2><!-- Tambahkan class mx-auto di sini -->
+                <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
+                              Mission
+                          </h2>
                     <div class="mission-box text-center">
                         <p>
                             1. Menyelenggarakan layanan psikologi yang menjunjung tinggi
@@ -31,7 +34,9 @@
                     </div>
                     
                     <br><br>
-                    <br><br>
+                        <br><br>
+
+                </div>
             </div>
         </div>
     </div>
