@@ -29,27 +29,32 @@
                     sudah punya akun? <a><u>masuk yuk!</u></a>
                 </p>
                 <br />
-                <br />
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
+                
                 <a class="back"><img src="../images/back.svg" alt="back" class="back" /></a>
                 <input type="email" id="email" name="email" placeholder="Masukan Email" required />
+                <div id="emailError" class="invalid"></div>
+
                 <p>
                     <img src="../images/info-rounded.svg" alt="" class="seru" />pastikan
                     email kamu aktif
                 </p>
-                <div class="divider"></div>
-                <div class="or-text">or</div>
-                <div class="right-divider"></div>
-                <div class="container-login">
-                    <div class="container-login">
-                        <div class="container-login">
-                            <a href="/auth/google" style="color: blue">
-                                <img src="../images/google.png" alt="gg" class="google-logo" />
-                                Sign In With Google
-                            </a>
-                            <button onclick="nextStep()">Berikutnya</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="d-flex justify-content mb-3 mt-2">
+                    <div class="divider"></div>
+                    <div class="or-text">or</div>
+                    <div class="right-divider "></div>
+                  </div>
+                  <div class="google-container d-flex">
+                    <a href="/auth/google" style="color: blue">
+                        <img src="../images/google.png" alt="gg" class="google-logo" />
+                        Sign In With Google
+                    </a>
+                  </div>
+                  <button id="next-button" onclick="nextStep(event)">Berikutnya</button>
+                
             </div>
 
             <div id="step2" style="display: none">
@@ -57,8 +62,13 @@
                 <!-- Your Step 2 Content -->
                 <br />
                 <br />
-                <a class="back" onclick="prevStep()"><img src="../images/back.svg" alt="back"
-                        class="back" /></a>
+                
+                <a class="back" onclick="prevStep()"><img src="../images/back.svg" alt="back"class="back" /></a>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
+                
                 <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Nama Lengkap" required />
                 <input type="text" id="tempatTanggalLahir" name="tempatTanggalLahir"
                     placeholder="Tempat, tanggal lahir" required />
@@ -73,26 +83,35 @@
                         <option value="Umum">Umum</option>
                     </select>
                 </label>
-                <button onclick="nextStep()">Berikutnya</button>
+                <button id="next-button" onclick="nextStep(event)">Berikutnya</button>
             </div>
 
             <div id="step3" style="display: none">
                 <h2>Yuk isi identitasmu dulu!</h2>
-                <!-- Your Step 3 Content -->
                 <br />
                 <br />
-                <a class="back" onclick="prevStep()"><img src="../images/back.svg" alt="back"
-                        class="back" /></a>
-                <input type="text" id="nim" value="" name="nim" placeholder="NIM" required />
+                <a class="back" onclick="prevStep()">
+                    <img src="../images/back.svg" alt="back" class="back" />
+                </a>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
+                <input type="text" id="nim" name="nim" placeholder="NIM" required />
+                <div id='nimError' class="invalid"></div>
                 <input type="text" id="jurusan" name="jurusan" placeholder="Jurusan" required />
                 <input type="text" id="fakultas" name="fakultas" placeholder="Fakultas" required />
                 <input type="text" id="tahunMasuk" name="tahunMasuk" placeholder="Tahun Masuk" required />
-                <button onclick="nextStep()">Berikutnya</button>
+                <button id="next-button" onclick="nextStep(event)">Berikutnya</button>`;
             </div>
 
             <div id="step4" style="display: none">
                 <h2>Yuk isi identitasmu dulu!</h2>
                 <h2>Buat Password</h2>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
                 <!-- Your Step 4 Content -->
                 <br />
                 <br />
@@ -101,127 +120,154 @@
                 <input type="password" id="Password" name="password" placeholder="Password" required />
                 <input type="password" id="KonfirmasiPassword" name="KonfirmasiPassword"
                     placeholder="Konfirmasi Password" required oninput="checkPasswordMatch()" />
+                <div id="passwordError" class="invalid"></div>
+                <div id="passwordMatchError" class="invalid-feedback"></div>
 
                 <p>
                     <img src="../images/info-rounded.svg" alt="" />password minimal 8
                     karakter
                 </p>
-                <button id="submitForm" type="submit">Daftar</button>
+                <button id="submitForm" class = 'submit-button' type="submit">Daftar</button>
             </div>
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+ 
     <script>
         let currentStep = 1;
-
         const form = document.querySelector('form');
         const formData = new FormData(form);
-
-        function nextStep() {
+        
+        function nextStep(event) {
+            event.preventDefault();
+            console.log('next step tertekan')
             let status = document.getElementById('status').value;
-
-            formData.append('status', status);
-
             let inputs = document.querySelectorAll(`#step${currentStep} input`);
+            let allInputsFilled = true;
+        
+            inputs.forEach(input => {
+                console.log(input.value);
+                if (input.value == "") {
+                    allInputsFilled = false;
+                }
+            });
+            console.log(allInputsFilled);
+            if (!allInputsFilled) {
+                var alertMessages = document.querySelectorAll('#alert-messages');
+                alertMessages.forEach(function(alert) {
+                    alert.style.display = "block";
+                });
+                return;
+            }
+        
             inputs.forEach(input => {
                 formData.append(input.name, input.value);
             });
-
-
+            formData.append('status', status);
+            console.log(Object.fromEntries(formData.entries()));
+        
             document.getElementById(`step${currentStep}`).style.display = "none";
+            var alertMessages = document.querySelectorAll('#alert-messages');
+                alertMessages.forEach(function(alert) {
+                    alert.style.display = "none";
+                });
             currentStep++;
             document.getElementById(`step${currentStep}`).style.display = "block";
-
             if (currentStep === 3) {
-                let status =
-                    document.getElementById("status").value;
+                let status = document.getElementById("status").value;
+                console.log(status);
+                let object = Object.fromEntries(formData.entries())
 
                 if (status === "Mahasiswa") {
-                    // Show Mahasiswa form
-                    document.getElementById("step3").innerHTML = `
-                                <h2>Yuk isi identitasmu dulu!</h2>
-                                <br />
-                                <br />
-                                <a class="back" onclick="prevStep()"
-                        ><img src="../images/back.svg" alt="back" class="back"
-                        /></a>
-                    <input type="text" id="nim" name="nim" placeholder="NIM" required />
-                    <input type="text" id="jurusan" name="jurusan" placeholder="Jurusan" required />
-                    <input type="text" id="fakultas" name="fakultas" placeholder="Fakultas" required />
-                    <input type="text" id="tahunMasuk" name="tahunMasuk" placeholder="Tahun Masuk" required />
-                
-                    <button onclick="nextStep()">Berikutnya</button>
-
-                    `;
-                    document.getElementById("mahasiswaForm").style.display = "block";
-                    document.getElementById("umumForm").style.display = "none";
+                    let step3Content = `
+                        <h2>Yuk isi identitasmu dulu!</h2>
+                        <br />
+                        <br />
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
+                        <a class="back" onclick="prevStep()">
+                            <img src="../images/back.svg" alt="back" class="back" />
+                        </a>
+                        <input type="text" id="nim" name="nim" placeholder="NIM" required value="${object.nim}" />
+                        <div id='nimError' class = 'invalid'></div>
+                        <input type="text" id="jurusan" name="jurusan" placeholder="Jurusan" required value="${object.jurusan}" />
+                        <input type="text" id="fakultas" name="fakultas" placeholder="Fakultas" required value="${object.fakultas}" />
+                        <input type="text" id="tahunMasuk" name="tahunMasuk" placeholder="Tahun Masuk" required value="${object.tahunMasuk}" />
+                        <button id = 'next-button' onclick="nextStep(event)">Berikutnya</button>`;
+                    document.getElementById("step3").innerHTML = step3Content;
                 } else if (status === "Umum") {
-                    // Show Umum form
-                    document.getElementById("step3").innerHTML = `
-                                <h2>Yuk isi identitasmu dulu!</h2>
-                                <br />
-                                <br />
-                                <a class="back" onclick="prevStep()"
-                        ><img src="../images/back.svg" alt="back" class="back"
-                        /></a>
-                            <input type="text" id="nik" name="nik" placeholder="NIK" required />
-                            <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Pekerjaan" required />
-                            <input type="text" id="asalInstansi" name="asalInstansi" placeholder="Asal Instansi" required />
-                            <input type="text" id="statusPernikahan" name="statusPernikahan" placeholder="Status Pernikahan" required />
-                            
-                            <button onclick="nextStep()">Berikutnya</button>
-
-                            `;
-                    document.getElementById("umumForm").style.display = "block";
-                    document.getElementById("mahasiswaForm").style.display = "none";
+                    let step3Content = `
+                        <h2>Yuk isi identitasmu dulu!</h2>
+                        <br />
+                        <br />
+                        <a class="back" onclick="prevStep()">
+                            <img src="../images/back.svg" alt="back" class="back" />
+                        </a>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert-messages" style="display: none">
+                    Mohon isi semua kolom
+                    <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
+                </div>
+                        <input type="text" id="nik" name="nik" placeholder="NIK" required value="${formData.get('nik') || ''}" />
+                        <div id='nimError' class = 'invalid'></div>
+                        <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Pekerjaan" required value="${formData.get('pekerjaan') || ''}" />
+                        <input type="text" id="asalInstansi" name="asalInstansi" placeholder="Asal Instansi" required value="${formData.get('asalInstansi') || ''}" />
+                        <input type="text" id="statusPernikahan" name="statusPernikahan" placeholder="Status Pernikahan" required value="${formData.get('statusPernikahan') || ''}" />
+                        <button id = 'next-button' onclick="nextStep(event)">Berikutnya</button>`;
+                    document.getElementById("step3").innerHTML = step3Content;
                 }
             }
-        }
 
+        }
+        
         function prevStep() {
             document.getElementById(`step${currentStep}`).style.display = "none";
             currentStep--;
             document.getElementById(`step${currentStep}`).style.display = "block";
         }
-
+        
         function checkPasswordMatch() {
             var password = document.getElementById("Password").value;
             var confirmPassword = document.getElementById("KonfirmasiPassword").value;
-
             if (password !== confirmPassword) {
-                document.getElementById("passwordMatchError").innerHTML = "Password dan konfirmasi password harus sama.";
+                let errorPass = document.getElementById("passwordMatchError");
+                errorPass.innerHTML = "Password dan konfirmasi password harus sama.";
+
             } else {
                 document.getElementById("passwordMatchError").innerHTML = "";
             }
         }
-
+        
+        
+        console.log('debug')
         document.getElementById('submitForm').addEventListener('click', function(event) {
             event.preventDefault();
-
+            console.log('debug')
             var password = document.getElementById("Password").value;
-
+        
             formData.append('password', password);
             console.log("FormData sebelum dikirim:", formData);
-
+        
             var confirmPassword = document.getElementById("KonfirmasiPassword").value;
-
+        
             if (password !== confirmPassword) {
                 document.getElementById("passwordMatchError").innerHTML =
                     "Password dan konfirmasi password harus sama.";
                 return; // Stop form submission if passwords don't match
             }
-
+        
             var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
+        
             if (!csrfToken) {
                 console.error('CSRF token not found!');
                 return;
             }
-
+        
             console.log(JSON.stringify(formData));
-
+        
             axios.post('/submit-registration', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -233,10 +279,39 @@
                     window.location.href = '/login';
                 })
                 .catch(error => {
-                    alert("Form submission failed!");
-                    console.error('Error:', error.response.data);
+                    console.log(error);
+                        const errors = error.response.data.errors;
+                        Object.keys(errors).forEach(key => {
+                            console.log(key);
+                            const errorContainer = document.getElementById(`${key}Error`);
+                            errorContainer.innerText = error.response.data.errors[key];
+                        });
+                        let key = Object.keys(errors)
+                        console.log(key[0]);
+                        if (key[0] === 'email') {
+                            document.getElementById(`step4`).style.display = "none";
+                            document.getElementById(`step1`).style.display = "block";
+                            currentStep = 1;
+                        } else if (key[0] === 'nim' || key[0] === 'nik') {
+                            document.getElementById(`step4`).style.display = "none";
+                            document.getElementById(`step3`).style.display = "block";
+                            currentStep = 3;
+                        }
+                        document.getElementById(`alert1`).style.display = 'block';
                 });
-        })
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var alertMessages = document.querySelectorAll('#alert-messages');
+    alertMessages.forEach(function(alert) {
+        var btnClose = alert.querySelector('.btn-close');
+        btnClose.addEventListener('click', function() {
+            alert.style.display = 'none';
+        });
+    });
+});
+
     </script>
 </body>
 

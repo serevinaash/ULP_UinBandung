@@ -41,7 +41,7 @@ class RegistrationController extends Controller
         // Menambahkan data khusus jika status adalah mahasiswa
         if ($request->status === 'Mahasiswa') {
             $request->validate([
-                'nim' => 'required|string',
+                'nim' => 'required|string|unique:users',
                 'jurusan' => 'required|string',
                 'fakultas' => 'required|string',
                 'tahunMasuk' => 'required|string',
@@ -56,7 +56,7 @@ class RegistrationController extends Controller
         // Menambahkan data khusus jika status adalah umum
         if ($request->status === 'Umum') {
             $request->validate([
-                'nik' => 'required|string',
+                'nik' => 'required|string|unique:users',
                 'pekerjaan' => 'required|string',
                 'asalInstansi' => 'required|string',
                 'statusPernikahan' => 'required|string',

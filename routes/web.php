@@ -1,13 +1,12 @@
 <?php
 
 
-use App\Http\Controllers\Auth\GoogleLoginController;
+
 use App\Http\Controllers\Auth\RegistrationController;
 use Illuminate\Support\Facades\Route;
-
-
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\GoogleLoginController;
+
 
 /*
 |--------------------------------------------------------------------------
