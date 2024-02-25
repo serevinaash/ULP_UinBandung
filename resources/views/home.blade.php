@@ -34,6 +34,7 @@
 @include('landing_page.home')
 <!-- ABOUT -->
 @include('landing_page.about')
+@include('landing_page.about2')
 <!-- SERVICES -->
 @include('landing_page.services')
 <!-- ALUR -->
