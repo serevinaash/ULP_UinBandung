@@ -117,12 +117,12 @@
                         <div class="row justify-content-center">
                             @foreach ($data as $item)
                                 <div class="col-md-2 col-sm-4 text-center">
-                                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.8s">
+                                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.8s" style="position: relative">
                                         <div class="team-info text-center">
                                             <h5>{{ $item['day'] }}</h5>
                                         </div>
                                         <img src="{{ asset('images/Ellipse2.svg') }}" class="img-responsive" alt="">
-                                        <div class="team-info text-center">
+                                        <div class="team-info text-center text-percentage">
                                             <h5>{{ $item['percentage'] }}% terisi</h5>
                                         </div>
                                     </div>

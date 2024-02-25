@@ -5,7 +5,7 @@
         <section id="jadwal" data-stellar-background-ratio="2">
             <br>
             <div class="col-md-12 text-center">
-                <h3 class="wow fadeInUp" data-wow-delay="1.6s">Pendaftaran Layanan Tes Uji Kompetensi <br> ULP UIN Sunan
+                <h3 class="wow fadeInUp" data-wow-delay="1.6s">Pendaftaran Layanan Konseling <br> ULP UIN Sunan
                     Gunung Djati Bandung</h3>
                 <br>
             </div>
