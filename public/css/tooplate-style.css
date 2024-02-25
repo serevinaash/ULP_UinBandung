@@ -1173,6 +1173,11 @@ footer a:hover {
   text-align : justify;
   margin-top: 20px;
 }
+.contents{
+  text-align : justify;
+  margin-top: 20px;
+  margin-bottom: 1100px;
+}
 .uji{
   text-align : justify;
   margin-top: 35%;
@@ -1556,7 +1561,7 @@ footer a:hover {
 
   .angle-up-btn {
     bottom: 10em;
-  3
+  
 }
 
 @media only screen and (max-width: 639px) {
