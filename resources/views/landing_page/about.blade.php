@@ -11,7 +11,7 @@
                  
                           <div>
                             
-                              <p>
+                              <p style="align-text: justify;">
                                   Unit Layanan Psikologi (ULP) merupakan salah satu unit yang bergerak di
                                   bidang jasa layanan psikologi di bawah naungan Fakultas Psikologi Universitas
                                   Islam Negeri Sunan Gunung Djati Bandung  Seiring dengan berubahnya status Program
