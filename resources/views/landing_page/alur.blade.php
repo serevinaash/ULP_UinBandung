@@ -16,11 +16,10 @@
                     <div class="team-info text-center">
                       <h3>Memilih Bentuk Service</h3>
                       <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Inventore dignissimos officia dicta suscipit vel
-                        eum Read more
+                      Dalam memilih layanan psikologi, pertimbangkan jenis layanan yang Anda butuhkan. 
+
                       </p>
-                      <br><br><br>
+                      <br>
                     </div>
                   </div>
                 </div>
@@ -30,11 +29,9 @@
                     <div class="team-info text-center">
                       <h3>Mengisi Form</h3>
                       <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Inventore dignissimos officia dicta suscipit vel
-                        eum Read more
+                      Setelah Anda memilih layanan psikologi. Mengisi formulir ini membantu psikolog memahami situasi Anda dengan lebih baik sehingga mereka dapat memberikan bantuan yang lebih efektif.
                       </p>
-                      <br><br><br>
+                      <br>
                     </div>
                   </div>
                 </div>
@@ -44,12 +41,13 @@
                     <div class="team-info text-center">
                       <h3>Konfirmasi Kehadiran</h3>
                       <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Inventore dignissimos officia dicta suscipit vel
-                        eum Read more
-                      </p>
+                      cek secara berkala status pengajuan yang telah dibuat. pastikan kamu dapat hadir di waktu yang telah dipilih.
+                    
+                      <br>
+                      <br>  
+                    </p>
                       
-                      <br><br><br>
+                      <br>
                     </div>
                   </div>
                 </div>
