@@ -658,6 +658,10 @@ header span i {
 .img-thinking {
     width: 200px;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-konseling {
@@ -1195,6 +1199,10 @@ footer a:hover {
 .upaya {
     text-align: justify;
     margin-top: 20px;
+}
+.up {
+    text-align: justify;
+    width: 800px;
 }
 
 .uji {

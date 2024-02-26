@@ -3,7 +3,7 @@
         <div class="bg-about">
             <div class="row">
             <div class="col-md-12 col-sm-12 mx-auto">
-            <img alt="thinking" class="img-thinking" src="images/thinking.svg" />
+           <center> <img alt="thinking" class="img-thinking" src="images/thinking.svg" /></center>
             
                 <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
                 Apa Itu Unit Layanan Psikologi?
@@ -11,7 +11,7 @@
                  
                           <div>
                             
-                              <p style="align-text: justify;">
+                              <p class="up">
                                   Unit Layanan Psikologi (ULP) merupakan salah satu unit yang bergerak di
                                   bidang jasa layanan psikologi di bawah naungan Fakultas Psikologi Universitas
                                   Islam Negeri Sunan Gunung Djati Bandung  Seiring dengan berubahnya status Program
