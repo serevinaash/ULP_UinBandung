@@ -22,7 +22,6 @@
                                   Tahun 2015 BPP kemudian berubah menjadi unit Layanan Psikologi dan Pengabdian
                                   Masyarakat (LPPM) dan akhirnya menjadi Unit Layanan Psikologi (ULP) di Tahun 2018.
                               </p>
-                                <br><br><br><br><br><br><br><br>
                         
                           </div>
                     </div>

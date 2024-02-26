@@ -1205,6 +1205,7 @@ footer a:hover {
 .up {
     text-align: justify;
     width: 800px;
+    margin: 0 auto;
 }
 
 .uji {
@@ -1639,6 +1640,9 @@ textarea.form-control {
 
     h4 {
         font-size: 1.4em;
+    }
+    up {
+        width: 100px;
     }
 
     #home h3 {
