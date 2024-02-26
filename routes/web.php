@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\KonselingController;
 use App\Http\Controllers\PsikotesController;
 use App\Http\Controllers\UjiKompetensiController;
+use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
