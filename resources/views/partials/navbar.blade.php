@@ -14,7 +14,11 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
+                    @if(auth()->user()->status === 'umum')
                     <a href="/profile/umum">Profile</a>
+                    @else
+                    <a href="/profile/mahasiswa">Profile</a>
+                    @endif
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service <b class="caret"></b></a>

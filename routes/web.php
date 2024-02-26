@@ -9,7 +9,8 @@ use App\Http\Controllers\KonselingController;
 use App\Http\Controllers\PsikotesController;
 use App\Http\Controllers\UjiKompetensiController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\ProfileController;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,19 +49,14 @@ Route::get('/services/uji-kompetensi', [UjiKompetensiController::class, 'index']
 Route::get('/register/uji-kompetensi', [UjiKompetensiController::class, 'daftar'])->middleware('auth');
 Route::post('/submit-ujikom', [UjiKompetensiController::class, 'create']);
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::get('profile/mahasiswa', [ProfileController::class, 'index'])->middleware('auth');
+Route::get('profile/umum', [ProfileController::class, 'index2'])->middleware('auth');
+
 
 Route::get('/', function () {
     return view('home');
 });
 
-
-Route::get('profile/mahasiswa', function(){
-    return view('services.profile');
-});
-
-Route::get('profile/umum', function(){
-    return view('services.profileUmum');
-});
 
 
