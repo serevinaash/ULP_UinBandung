@@ -21,7 +21,7 @@
                 <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
                               Mission
                           </h2>
-                    <div class="mission-box text-center">
+                    <div class="mission-box">
                         <p>
                             1. Menyelenggarakan layanan psikologi yang menjunjung tinggi
                             kesejahteraan psikologis, etika profesi, nilai-nilai keislaman dan

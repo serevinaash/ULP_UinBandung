@@ -63,7 +63,6 @@ h1 {
 h2 {
   color: #272727;
   font-size: 3em;
-  padding-bottom: 5px;
 }
 
 h3 {
@@ -573,6 +572,8 @@ background-color:  #155c7a; /* Darker blue color on hover */
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 150px;
+  height: 100%;
+  margin: 0;
 }
 
 .profile img,
@@ -592,9 +593,9 @@ background-color:  #155c7a; /* Darker blue color on hover */
 }
 .bg-about{
   background: url('../images/Ellipse4.svg') no-repeat top center;
-  background-size: 90%;
-  margin-bottom: 100px;
-  
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 .about-info {
   margin-top: 20px;
@@ -1095,7 +1096,6 @@ footer a:hover {
 .stories-image,
 .stories-info {
   display: inline-block;
-  vertical-align: top;
 }
 
 .stories-image img {
@@ -1172,6 +1172,12 @@ footer a:hover {
 .upaya{
   text-align : justify;
   margin-top: 20px;
+}
+.contents{
+  text-align : justify;
+  margin-bottom: 200px;
+  font-size: 14px;
+  margin-left: 100px;
 }
 .uji{
   text-align : justify;
