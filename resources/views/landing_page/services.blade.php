@@ -12,9 +12,7 @@
               <div class="team-info text-center">
                 <h3>Konseling</h3>
                 <p>
-                  General Lorem ipsum dolor, sit amet consectetur adipisicing
-                  elit. Inventore dignissimos officia dicta suscipit vel eum
-                  Read more
+                Uji kompetensi psikolog adalah serangkaian tes atau evaluasi yang digunakan untuk mengukur pengetahuan, keterampilan, dan kompetensi lainnya yang diperlukan oleh seorang psikolog dalam praktik profesionalnya.
                 </p>
                 
                 <br><br><br><br>
@@ -28,9 +26,7 @@
               <div class="team-info text-center">
                 <h3>Psikotes</h3>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Inventore dignissimos officia dicta suscipit vel eum Read
-                  more
+                psikotes merupakan tes atau alat evaluasi yang digunakan untuk mengukur berbagai aspek psikologis seseorang, seperti kecerdasan, kemampuan kognitif, kepribadian, minat, dan bakat. Psikotes sering digunakan dalam berbagai konteks, seperti seleksi karyawan, penempatan pekerjaan, dan penilaian dalam pendidikan
                 </p>
                 
                 
@@ -45,9 +41,7 @@
               <div class="team-info text-center">
                 <h3>Uji Kompetensi</h3>
                 <p>
-                  lLorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Inventore dignissimos officia dicta suscipit vel eum Read
-                  moreorem
+                Uji kompetensi psikolog adalah serangkaian tes atau evaluasi yang digunakan untuk mengukur pengetahuan, keterampilan, dan kompetensi lainnya yang diperlukan oleh seorang psikolog dalam praktik profesionalnya.
                 </p>
                 
                 <br><br><br><br>
