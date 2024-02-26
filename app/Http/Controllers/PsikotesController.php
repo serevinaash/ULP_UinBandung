@@ -103,7 +103,7 @@ class PsikotesController extends Controller
         // dd($request);
 
         // Jika psikotes berhasil dibuat, kembalikan respons
-        return redirect('/services/psikotes')->with('success', 'Anda berhasil membuat janji temu.');
+        return redirect('/services/psikotes')->with('sukses', 'Anda berhasil membuat janji temu.');
     }
 
     public function createKelompok(Request $request)

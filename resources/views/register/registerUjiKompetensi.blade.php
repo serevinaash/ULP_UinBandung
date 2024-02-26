@@ -29,8 +29,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Tujuan Psikotes</label>
-                                            <textarea id="tujuan" class="form-control" name="tujuan" placeholder="Masukkan tujuan Psikotes Anda"></textarea>
+                                            <label>Tujuan Uji Kompetensi</label>
+                                            <textarea id="tujuan" class="form-control" name="tujuan" placeholder="Masukkan tujuan Uji Kompetensi Anda"></textarea>
                                         </div>
                                     </div>
                                 </div>

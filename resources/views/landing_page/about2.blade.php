@@ -1,4 +1,4 @@
-<section>
+ <section>
     <div class="container">
         <div class="bg-about">
             <div class="row">

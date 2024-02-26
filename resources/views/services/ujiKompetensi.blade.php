@@ -33,6 +33,11 @@
         <div class="container2">
             <div class="row">
                 <div class="col-md-5 col-sm-2">
+                    @if(session()->has('success'))
+                    <div class="alert alert-success " style="max-width: 280px" >
+                        {{ session('success') }}
+                    </div>
+                    @endif
                     <div class="about-info">
                         <h2 class="wow fadeInUp" data-wow-delay="0.6s">Uji Kompetensi</h2>
                         <div class="d-flex justify-content-start">

@@ -31,6 +31,11 @@
         <div class="container2">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
+                    @if(session()->has('success'))
+                    <div class="alert alert-success " style="max-width: 280px" >
+                        {{ session('success') }}
+                    </div>
+                    @endif
                     <div class="about-info">
                         <h2 class="wow fadeInUp" data-wow-delay="0.6s">Psikotes</h2>
                     </div>
@@ -131,7 +136,7 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
+                    </div> 
                     <div class="col-md-12 text-center">
                         <br />
                         <p data-wow-delay="1.6s">
