@@ -36,21 +36,24 @@
                     <img src="../images/info-rounded.svg" alt="" class="seru" />pastikan
                     email kamu aktif
                 </p>
-                <div class="divider"></div>
-                <div class="or-text">or</div>
-                <div class="right-divider"></div>
-                <div class="container-login">
-                    <div class="container-login">
-                        <div class="container-login">
-                            <a href="/auth/google" style="color: blue">
-                                <img src="../images/google.png" alt="gg" class="google-logo" />
-                                Sign In With Google
-                            </a>
-                            <button onclick="nextStep()">Berikutnya</button>
-                        </div>
-                    </div>
-                </div>
+                </form>
+        <div class="divider"></div>
+        <div class="or-text">or</div>
+        <div class="right-divider"></div>
+        <div class="container-login">
+          <div class="container-login">
+            <div class="container-login">
+              <a href=""><label for="">
+                <img src="../images/google.png" alt="gg" class="google-logo" />
+                Sign In With Google
+              </label>
+              </a>
+              <button onclick="nextStep()">Berikutnya</button>
             </div>
+          </div>
+        </div>
+      </div>
+
 
             <div id="step2" style="display: none">
                 <h2>Yuk, isi identitasmu dulu!</h2>
