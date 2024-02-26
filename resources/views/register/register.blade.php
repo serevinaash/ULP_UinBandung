@@ -60,7 +60,8 @@
         </div>
       </div>
 
-
+            
+    <div class="container">
             <div id="step2" style="display: none">
                 <h2>Yuk, isi identitasmu dulu!</h2>
                 <!-- Your Step 2 Content -->
