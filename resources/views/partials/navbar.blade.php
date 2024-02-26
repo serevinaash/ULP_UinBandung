@@ -44,12 +44,12 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href=""
+                                <a href="/logout"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
 
-                                <form id="logout-form" action="" method="POST" style="display: none;">
+                                <form id="logout-form" action="/logout" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                             </li>
