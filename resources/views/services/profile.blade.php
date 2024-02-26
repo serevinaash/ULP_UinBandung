@@ -58,6 +58,7 @@
             <div class="card-header">Informasi Pribadi</div>
             <div class="card-body">
               <form>
+                @csrf
                 <!-- Grup Form (nama lengkap) -->
                 <div class="mb-3">
                   <label class="small mb-1" for="inputFullName"
@@ -68,7 +69,7 @@
                     id="inputFullName"
                     type="text"
                     placeholder="Masukkan nama lengkap"
-                    value="Valerie Luna"
+                    value="{{ auth()->user()->nama_lengkap }}"
                   />
                 </div>
                 <!-- Grup Form (alamat email) -->
@@ -81,7 +82,7 @@
                     id="inputEmailAddress"
                     type="email"
                     placeholder="Masukkan alamat email"
-                    value="name@example.com"
+                    value="{{ auth()->user()->email }}"
                   />
                 </div>
                 <!-- Grup Form (lokasi) -->
@@ -106,7 +107,7 @@
                     type="text"
                     name="birthday"
                     placeholder="Masukkan tanggal lahir"
-                    value="06/10/1988"
+                    value="{{ auth()->user()->tempat_tanggal_lahir }}"
                   />
                 </div>
                 <!-- Grup Form (agama) -->
@@ -116,7 +117,7 @@
                     class="form-control"
                     id="inputReligion"
                     type="text"
-                    placeholder="Masukkan agama"
+                    placeholder="{{ auth()->user()->agama }}"
                   />
                 </div>
                 <!-- Baris Form -->
@@ -141,7 +142,7 @@
                       id="inputWhatsApp"
                       type="tel"
                       placeholder="Masukkan nomor WhatsApp"
-                      value="555-123-4567"
+                      value="{{ auth()->user()->noWA}}"
                     />
                   </div>
                 </div>
@@ -154,7 +155,7 @@
                       class="form-control"
                       id="inputNIM"
                       type="text"
-                      placeholder="Masukkan NIM"
+                      placeholder="{{ auth()->user()->nim}}"
                     />
                   </div>
                   <!-- Grup Form (jurusan) -->
@@ -164,7 +165,7 @@
                       class="form-control"
                       id="inputJurusan"
                       type="text"
-                      placeholder="Masukkan jurusan"
+                      placeholder="{{ auth()->user()->jurusan }}"
                     />
                   </div>
                 </div>
@@ -180,6 +181,7 @@
                       id="inputFakultas"
                       type="text"
                       placeholder="Masukkan fakultas"
+                      value="{{ auth()->user()->fakultas }}"
                     />
                   </div>
                   <!-- Grup Form (tahun masuk) -->
@@ -192,21 +194,21 @@
                       id="inputTahunMasuk"
                       type="text"
                       placeholder="Masukkan tahun masuk"
+                      value="{{ auth()->user()->tahun_masuk }}"
                     />
                   </div>
                 </div>
                 <!-- Grup Form (alamat tinggal) -->
                 <div class="mb-3">
-                  <label class="small mb-1" for="inputAlamatTinggal"
-                    >Alamat Tinggal</label
-                  >
+                  <label class="small mb-1" for="inputAlamatTinggal">Alamat Tinggal</label>
                   <textarea
                     class="form-control"
                     id="inputAlamatTinggal"
                     rows="3"
                     placeholder="Masukkan alamat tinggal"
-                  ></textarea>
+                  >{{ auth()->user()->alamat }}</textarea>
                 </div>
+                
                 <!-- Tombol Simpan Perubahan -->
                 <button class="btn btn-primary" type="button">
                   Simpan Perubahan

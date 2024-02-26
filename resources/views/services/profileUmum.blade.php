@@ -67,7 +67,7 @@
       id="inputFullName"
       type="text"
       placeholder="Masukkan nama lengkap"
-      value="Valerie Luna"
+      value="{{ auth()->user()->nama_lengkap }}"
     />
   </div>
   <!-- Grup Form (alamat email) -->
@@ -78,7 +78,7 @@
       id="inputEmailAddress"
       type="email"
       placeholder="Masukkan alamat email"
-      value="name@example.com"
+      value="{{ auth()->user()->email }}"
     />
   </div>
   <!-- Grup Form (lokasi) -->
@@ -89,7 +89,7 @@
       id="inputLocation"
       type="text"
       placeholder="Masukkan lokasi"
-      value="San Francisco, CA"
+      value="{{ auth()->user()->alamat }}"
     />
   </div>
   <!-- Grup Form (tanggal lahir) -->
@@ -112,6 +112,7 @@
       id="inputReligion"
       type="text"
       placeholder="Masukkan agama"
+      value="{{ auth()->user()->agama }}"
     />
   </div>
   <!-- Baris Form -->
@@ -145,7 +146,7 @@
         class="form-control"
         id="inputNIK"
         type="text"
-        placeholder="Masukkan NIK"
+        placeholder="{{ auth()->user()->nik }}"
       />
     </div>
     <!-- Grup Form (pekerjaan) -->
@@ -156,6 +157,7 @@
         id="inputPekerjaan"
         type="text"
         placeholder="Masukkan pekerjaan"
+        value="{{ auth()->user()->pekerjaan }}"
       />
     </div>
   </div>
@@ -169,6 +171,7 @@
         id="inputAsalInstansi"
         type="text"
         placeholder="Masukkan asal instansi"
+        value="{{ auth()->user()->asalInstansi }}"
       />
     </div>
     <!-- Grup Form (alamat tinggal) -->
@@ -179,8 +182,10 @@
         id="inputAlamatTinggal"
         rows="3"
         placeholder="Masukkan alamat tinggal"
-      ></textarea>
+      >{{ auth()->user()->alamat }}</textarea>
     </div>
+    
+    
   </div>
   <!-- Tombol Simpan Perubahan -->
   <button class="btn btn-primary" type="button">Simpan Perubahan</button>
