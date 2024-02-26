@@ -628,6 +628,10 @@ header span i {
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .profile img,
 .profile figcaption {
@@ -654,9 +658,6 @@ header span i {
 .img-thinking {
     width: 200px;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .img-konseling {
@@ -686,14 +687,12 @@ header span i {
 .vision-box,
 .mission-box {
     background-color: #90c8e8;
-    /* Blue background color */
     color: #fff;
-    /* White text color */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    /* Adjust as needed */
     text-align: justify;
+    max-width: 600px; /* Adjust as needed */
 }
 
 .vision-box h3,

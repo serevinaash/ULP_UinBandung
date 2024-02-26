@@ -2,9 +2,9 @@
     <div class="container">
         <div class="bg-about">
             <div class="row">
-                <div class="col-md-12 col-sm-12 mx-auto">
+                <div class="col-md-12 col-sm-8 mx-auto">
                 <h3 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
-                              Vission
+                              Vision
                           </h3>
                     <div class="vision-box text-center">
                        
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-sm-12 mx-auto"> 
+                <div class="col-md-12 col-sm-8 mx-auto"> 
                 <h3 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
                               Mission
                           </h3>
