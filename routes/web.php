@@ -48,7 +48,7 @@ Route::get('/services/uji-kompetensi', [UjiKompetensiController::class, 'index']
 Route::get('/register/uji-kompetensi', [UjiKompetensiController::class, 'daftar'])->middleware('auth');
 Route::post('/submit-ujikom', [UjiKompetensiController::class, 'create']);
 
-
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/', function () {
     return view('home');
