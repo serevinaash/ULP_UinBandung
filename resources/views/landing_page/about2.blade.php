@@ -3,9 +3,9 @@
         <div class="bg-about">
             <div class="row">
                 <div class="col-md-12 col-sm-12 mx-auto">
-                <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
+                <h3 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
                               Vission
-                          </h2>
+                          </h3>
                     <div class="vision-box text-center">
                        
                         <p>
@@ -18,9 +18,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 mx-auto"> 
-                <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
+                <h3 class="wow fadeInUp" data-wow-delay="0.6s" style="text-align : center;">
                               Mission
-                          </h2>
+                          </h3>
                     <div class="mission-box">
                         <p>
                             1. Menyelenggarakan layanan psikologi yang menjunjung tinggi
