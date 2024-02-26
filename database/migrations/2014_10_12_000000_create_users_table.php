@@ -21,11 +21,11 @@ return new class extends Migration
             $table->string('no_wa');
             $table->string('alamat');
             $table->string('status');
-            $table->string('nim')->nullable();
+            $table->string('nim')->unique()->nullable();
             $table->string('jurusan')->nullable();
             $table->string('fakultas')->nullable();
             $table->string('tahun_masuk')->nullable();
-            $table->string('nik')->nullable();
+            $table->string('nik')->unique()->nullable();
             $table->string('pekerjaan')->nullable();
             $table->string('asal_instansi')->nullable();
             $table->string('status_pernikahan')->nullable();
