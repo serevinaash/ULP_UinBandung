@@ -1,13 +1,12 @@
 <?php
 
-
-
+use App\Http\Controllers\Auth\GoogleLoginController;
 use App\Http\Controllers\Auth\RegistrationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\KonselingController;
 use App\Http\Controllers\PsikotesController;
-
+use App\Http\Controllers\UjiKompetensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +23,7 @@ Route::get('auth/google', [GoogleLoginController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleLoginController::class, 'handleCallback']);
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post("/login",[LoginController::class, "authenticate"]);
 
 Route::get('/register', [RegistrationController::class, 'index']);
 Route::post('/submit-registration', [RegistrationController::class, 'register']);
@@ -40,12 +40,12 @@ Route::get('/register/psikotes-kelompok', [PsikotesController::class, 'daftarKel
 Route::post('/submit-psikotes', [PsikotesController::class, 'create']);
 Route::post('/submit-psikotes-kelompok', [PsikotesController::class, 'createKelompok']);
 
+Route::get('/services/uji-kompetensi', [UjiKompetensiController::class, 'index']);
+Route::get('/register/uji-kompetensi', [UjiKompetensiController::class, 'daftar']);
+Route::post('/submit-ujikom', [UjiKompetensiController::class, 'create']);
+
 Route::get('/', function () {
     return view('home');
-});
-
-Route::get('/services/ujikompetensi',function(){
-    return view('services.ujiKompetensi');
 });
 
 
@@ -57,8 +57,4 @@ Route::get('profile/umum', function(){
     return view('services.profileUmum');
 });
 
-Route::get('/register/ujikompetensi', function(){
-    return view('register.registerUjiKompetensi');
-});
 
-Route::post("/login",[LoginController::class, "authenticate"]);
