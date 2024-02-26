@@ -596,6 +596,13 @@ background-color:  #155c7a; /* Darker blue color on hover */
   background-size: cover;
   width: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 .about-info {
   margin-top: 20px;
@@ -1177,7 +1184,10 @@ footer a:hover {
   text-align : justify;
   margin-bottom: 200px;
   font-size: 14px;
-  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
 }
 .uji{
   text-align : justify;
