@@ -772,6 +772,7 @@ header span i {
 .team-info {
     display: block;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .team-info2 {
@@ -784,6 +785,7 @@ header span i {
     margin: 0 auto;
     width: 306px;
     height: 156px;
+    margin-top: 10px;
 }
 
 .img-responsive2 {
