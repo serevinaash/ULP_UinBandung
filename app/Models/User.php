@@ -59,4 +59,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function konselings()
+    {
+        return $this->hasMany(Konseling::class);
+    }
+
+    public function psikotes()
+    {
+        return $this->hasMany(Psikotes::class);
+    }
 }
