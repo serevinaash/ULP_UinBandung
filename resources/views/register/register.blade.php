@@ -117,6 +117,9 @@
                     Mohon isi semua kolom
                     <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
                 </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none" id="alert-success">
+                    Registrasi Berhasil! Silahkan Login
+                  </div>
                 <!-- Your Step 4 Content -->
                 <br />
                 <br />
@@ -126,7 +129,7 @@
                 <input type="password" id="KonfirmasiPassword" name="KonfirmasiPassword"
                     placeholder="Konfirmasi Password" required oninput="checkPasswordMatch()" />
                 <div id="passwordError" class="invalid"></div>
-                <div id="passwordMatchError" class="invalid-feedback"></div>
+                <div id="passwordMatchError" class="invalid"></div>
 
                 <p>
                     <img src="../images/info-rounded.svg" alt="" />password minimal 8
@@ -197,11 +200,11 @@
                         <a class="back" onclick="prevStep()">
                             <img src="../images/back.svg" alt="back" class="back" />
                         </a>
-                        <input type="text" id="nim" name="nim" placeholder="NIM" required value="${object.nim}" />
+                        <input type="text" id="nim" name="nim" placeholder="NIM" required value="${object.nim !== undefined ? object.nim : ''}" />
                         <div id='nimError' class = 'invalid'></div>
-                        <input type="text" id="jurusan" name="jurusan" placeholder="Jurusan" required value="${object.jurusan}" />
-                        <input type="text" id="fakultas" name="fakultas" placeholder="Fakultas" required value="${object.fakultas}" />
-                        <input type="text" id="tahunMasuk" name="tahunMasuk" placeholder="Tahun Masuk" required value="${object.tahunMasuk}" />
+                        <input type="text" id="jurusan" name="jurusan" placeholder="Jurusan" required value="${object.jurusan !== undefined ? object.jurusan : ''}" />
+                        <input type="text" id="fakultas" name="fakultas" placeholder="Fakultas" required value="${object.fakultas !== undefined ? object.fakultas : ''}" />
+                        <input type="text" id="tahunMasuk" name="tahunMasuk" placeholder="Tahun Masuk" required value="${object.tahunMasuk !== undefined ? object.tahunMasuk : ''}" />
                         <button id = 'next-button' onclick="nextStep(event)">Berikutnya</button>`;
                     document.getElementById("step3").innerHTML = step3Content;
                 } else if (status === "Umum") {
@@ -216,11 +219,11 @@
                     Mohon isi semua kolom
                     <button type="button" class="btn-close" aria-label="Close" id="button-alert"></button>
                 </div>
-                        <input type="text" id="nik" name="nik" placeholder="NIK" required value="${formData.get('nik') || ''}" />
-                        <div id='nimError' class = 'invalid'></div>
-                        <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Pekerjaan" required value="${formData.get('pekerjaan') || ''}" />
-                        <input type="text" id="asalInstansi" name="asalInstansi" placeholder="Asal Instansi" required value="${formData.get('asalInstansi') || ''}" />
-                        <input type="text" id="statusPernikahan" name="statusPernikahan" placeholder="Status Pernikahan" required value="${formData.get('statusPernikahan') || ''}" />
+                        <input type="text" id="nik" name="nik" placeholder="NIK" required value="${object.nik !== undefined ? object.nik : ''}" />
+                        <div id='nikError' class = 'invalid'></div>
+                        <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Pekerjaan" required value="${object.pekerjaan !== undefined ? object.pekerjaan : ''}" />
+                        <input type="text" id="asalInstansi" name="asalInstansi" placeholder="Asal Instansi" required value="${object.asalInstansi !== undefined ? object.asalInstansi : ''}" />
+                        <input type="text" id="statusPernikahan" name="statusPernikahan" placeholder="Status Pernikahan" required value="${object.statusPernikahan !== undefined ? object.statusPernikahan : ''}" />
                         <button id = 'next-button' onclick="nextStep(event)">Berikutnya</button>`;
                     document.getElementById("step3").innerHTML = step3Content;
                 }
@@ -280,8 +283,10 @@
                     }
                 })
                 .then(response => {
-                    alert("Form submitted successfully!");
-                    window.location.href = '/login';
+                    document.getElementById('alert-success').style.display = 'block';
+                    setTimeout(() => {
+                        window.location.href = '/login';
+                    }, 1000); // Jeda 2 detik
                 })
                 .catch(error => {
                     console.log(error);
@@ -289,6 +294,7 @@
                         Object.keys(errors).forEach(key => {
                             console.log(key);
                             const errorContainer = document.getElementById(`${key}Error`);
+                            console.log(error.response.data.errors[key]);
                             errorContainer.innerText = error.response.data.errors[key];
                         });
                         let key = Object.keys(errors)

@@ -4,6 +4,8 @@ body {
   background-size: cover;
 }
 
+
+
 .container {
   margin-left: 74px;
   margin-top: 65px;
@@ -198,7 +200,7 @@ body {
   color: red;
 }
 
-#alert-messages {
-  width: 400px;
-  margin-bottom: 20px; /* Anda bisa menyesuaikan nilai margin-bottom sesuai kebutuhan */
+#alert-messages , #alert-success{
+  width: 380px; /* Anda bisa menyesuaikan nilai margin-bottom sesuai kebutuhan */
+  margin-bottom: 20px;
 }
