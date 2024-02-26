@@ -49,9 +49,9 @@ Route::get('/services/uji-kompetensi', [UjiKompetensiController::class, 'index']
 Route::get('/register/uji-kompetensi', [UjiKompetensiController::class, 'daftar'])->middleware('auth');
 Route::post('/submit-ujikom', [UjiKompetensiController::class, 'create']);
 
+
 Route::get('profile/mahasiswa', [ProfileController::class, 'index'])->middleware('auth');
 Route::get('profile/umum', [ProfileController::class, 'index2'])->middleware('auth');
-
 
 
 Route::get('/', function () {
