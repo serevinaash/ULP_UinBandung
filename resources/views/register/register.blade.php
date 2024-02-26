@@ -54,8 +54,12 @@
                     </a>
                   </div>
                   <button id="next-button" onclick="nextStep(event)">Berikutnya</button>
-                
+                </form>
             </div>
+          </div>
+        </div>
+      </div>
+
 
             <div id="step2" style="display: none">
                 <h2>Yuk, isi identitasmu dulu!</h2>

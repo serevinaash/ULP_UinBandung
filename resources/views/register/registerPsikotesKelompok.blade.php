@@ -13,7 +13,7 @@
                 <div class="container2 mx-auto">
                     <div class="row">
                         <div class="form-wrap">
-                            <form id="survey-form" action="/submit-psikotes" method="POST">
+                            <form id="survey-form" action="/submit-psikotes-kelompok" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
@@ -76,6 +76,15 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Jumlah Peserta</label>
+                                            <input min="10" type="number" id="jumlahPeserta" class="form-control" name="jumlahPeserta" placeholder="Masukkan jumlah peserta"></input>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-md-4">
                                         <button type="submit" id="submit" class="btn btn-primary btn-block">Submit
                                             Survey</button>
@@ -95,32 +104,14 @@
                             Pilih tanggal antara Senin hingga Kamis.
                         </div>
                     </div>
-
-                    <div id="toast2" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-header">
-                            <button type="button" class="close" data-dismiss="toast">&times;</button>
-                            <strong class="mr-auto">Peringatan</strong>
-                        </div>
-                        <div class="toast-body">
-                            Jadwal telah penuh! Pilih di tanggal lain.
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        const inputTanggal = document.getElementById('tanggal');
-        const toast = $('#toast');
-        const toast2 = $('#toast2');
-
-        const tanggalSekarang = new Date();
-        const hariSekarang = tanggalSekarang.getDay();
-
         document.getElementById('jenis-psikotes').addEventListener('change', function() {
             // Ambil jenis psikotes yang dipilih oleh pengguna
             var jenisPsikotes = this.value;
@@ -145,37 +136,16 @@
                     mediaSelect.appendChild(option);
                 });
             }
+
+            console.log(values);
         });
 
-        document.getElementById('tanggal').addEventListener('change', function() {
-            // Ambil tanggal yang dipilih oleh pengguna
-            var selectedDate = this.value;
 
-            // Kirim permintaan AJAX ke server untuk mendapatkan sesi-sesi yang tersedia untuk tanggal tersebut
-            axios.get('/get-available-sessions', {
-                    params: {
-                        tanggal: selectedDate
-                    }
-                })
-                .then(function(response) {
-                    // Ambil data sesi yang tersedia dari respons
-                    var availableSessions = response.data;
+        const inputTanggal = document.getElementById('tanggal');
+        const toast = $('#toast');
 
-                    if (availableSessions >= 20) {
-                        toast2.removeClass('hide').addClass('show');
-                        setTimeout(function() {
-                            toast2.removeClass('show').addClass('hide');
-                        }, 3000);
-
-                        inputTanggal.value = '';
-                    }
-
-                    console.log(availableSessions);
-                })
-                .catch(function(error) {
-                    console.error('Error:', error);
-                });
-        });
+        const tanggalSekarang = new Date();
+        const hariSekarang = tanggalSekarang.getDay();
 
         if (hariSekarang === 0) {
             tanggalSekarang.setDate(tanggalSekarang.getDate() + 1);

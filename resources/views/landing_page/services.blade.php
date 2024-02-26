@@ -16,6 +16,8 @@
                   elit. Inventore dignissimos officia dicta suscipit vel eum
                   Read more
                 </p>
+                
+                <br><br><br><br>
                 <a href="/services/konseling"><button class="custom-button" >Lihat Detail</button></a>
               </div>
             </div>
@@ -30,6 +32,9 @@
                   Inventore dignissimos officia dicta suscipit vel eum Read
                   more
                 </p>
+                
+                
+                <br><br><br><br>
                 <a href="/services/psikotes"><button class="custom-button">Lihat Detail</button></a>
               </div>
             </div>
@@ -44,6 +49,8 @@
                   Inventore dignissimos officia dicta suscipit vel eum Read
                   moreorem
                 </p>
+                
+                <br><br><br><br>
                 <a href="/services/ujikom"><button class="custom-button">Lihat Detail</button></a>
               </div>
             </div>
