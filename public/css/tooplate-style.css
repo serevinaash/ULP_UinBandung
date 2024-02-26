@@ -1138,7 +1138,6 @@ footer a:hover {
 .stories-image,
 .stories-info {
   display: inline-block;
-  vertical-align: top;
 }
 
 .stories-image img {
@@ -1635,11 +1634,13 @@ textarea.form-control {
 
   @media only screen and (max-width: 639px) {
     .unit {
-      margin-left: 10px;
+      font-size: 3em;
+      line-height: 1.2em;
     }
-
     .unitt {
-      margin-left: 10px;
+      font-size: 2em;
+      line-height: 1em;
+      text-align : justify;
     }
 
     h1 {
@@ -1661,9 +1662,14 @@ textarea.form-control {
     }
 
     #home h2 {
-      font-size: 11px;
+      font-size: 35px;
       letter-spacing: 1px;
       margin-left: 5px;
-
+      color: black;
+    }  
+      #home h5 {
+      font-size: 15px;
+      margin-left: -1px;
+      color: black;
     }
 }
