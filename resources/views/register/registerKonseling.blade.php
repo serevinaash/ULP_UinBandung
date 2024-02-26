@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-12">
                 <div class="container2 mx-auto">
-                    <div class="row">
+                <div class="row">
                         <div class="form-wrap">
                             <form id="survey-form" action="/submit-konseling" method="POST">
                                 @if (session()->has('failed'))
