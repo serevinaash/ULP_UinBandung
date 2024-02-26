@@ -26,7 +26,7 @@
                             <a href="/services/psikotes">Psikotes</a>
                         </li>
                         <li>
-                            <a href="/services/ujikompetensi">Uji Kompetensi</a>
+                            <a href="/services/uji-kompetensi">Uji Kompetensi</a>
                         </li>
                     </ul>
                 </li>

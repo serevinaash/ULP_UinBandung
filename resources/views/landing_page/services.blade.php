@@ -51,7 +51,7 @@
                 </p>
                 
                 <br><br><br><br>
-                <a href="/services/ujikom"><button class="custom-button">Lihat Detail</button></a>
+                <a href="/services/uji-kompetensi"><button class="custom-button">Lihat Detail</button></a>
               </div>
             </div>
           </div>
