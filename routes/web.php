@@ -28,7 +28,7 @@ Route::get('auth/google/callback', [GoogleLoginController::class, 'handleCallbac
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post("/login",[LoginController::class, "authenticate"]);
-Route::post('/logout',[LogoutController::class, 'logout'])->middleware('auth');
+Route::post('/logout',[LogoutController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/register', [RegistrationController::class, 'index'])->middleware('guest');
 Route::post('/submit-registration', [RegistrationController::class, 'register']);
@@ -60,3 +60,13 @@ Route::get('/', function () {
 
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
