@@ -14,7 +14,7 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    @if(auth()->user()->status === 'umum')
+                    @if(auth()->user() && (auth()->user()->status === 'umum' || auth()->user()->status === null))
                     <a href="/profile/umum">Profile</a>
                     @else
                     <a href="/profile/mahasiswa">Profile</a>
